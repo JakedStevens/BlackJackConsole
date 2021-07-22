@@ -38,5 +38,12 @@ namespace BlackJackClassLibrary
             var shuffledDeck = cards.OrderBy(item => rnd.Next()).ToList();
             return shuffledDeck;
 		}
-	}
+
+        public Card DealCard(Deck deck)
+        {
+            Card card = deck.Cards[0];
+            deck.Cards.RemoveAt(0);
+            return card;
+        }
+    }
 }
