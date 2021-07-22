@@ -6,22 +6,14 @@ using System.Threading.Tasks;
 
 namespace BlackJackClassLibrary
 {
-    //public class Card
-    //{
-    //	public string Color { get; set; }
-    //	public string Suit { get; set; }
-    //	public string Value { get; set; }
-    //	public int EvaluatedValue { get; set; }
-    //}
-
     public class Card
     {
         public enum SuitsEnum
         {
-            Hearts = 0,
-            Diamonds = 1,
-            Clubs = 2,
-            Spades = 3
+            Diamonds = 0,
+            Hearts = 1,
+            Spades = 2,
+            Clubs = 3
         }
 
         public int Value { get; set; }
@@ -53,8 +45,6 @@ namespace BlackJackClassLibrary
                 return name;
             }
         }
-
-        //public string Name { get { return NamedValue + " of  " + Suit.ToString(); } }
 
         public Card(int value, SuitsEnum suit)
         {

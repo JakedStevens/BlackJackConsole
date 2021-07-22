@@ -10,8 +10,14 @@ namespace BlackJackConsole
 			Console.WriteLine("Gambling addictions are fun!");
 			Deck deck = new Deck();
 
-			deck.FillDeck();
-			deck.PrintDeck();
+			var deck1 = deck.BuildDeck();
+			deck.PrintDeck(deck1);
+
+			Console.WriteLine("Shuffle?");
+			Console.ReadLine();
+			var deck2 = deck.ShuffleDeck(deck1);
+			deck.PrintDeck(deck2);
+
 		}
 	}
 }
